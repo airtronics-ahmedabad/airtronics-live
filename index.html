@@ -17,9 +17,10 @@
         .card-container {
             background-color: #ffffff;
             width: 100%;
-            max-width: 450px; /* Mobile screen width */
+            max-width: 450px;
             min-height: 100vh;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
+            padding-bottom: 40px;
         }
         .header-bg {
             background: linear-gradient(135deg, #0284c7, #0ea5e9);
@@ -73,13 +74,13 @@
             margin-bottom: 30px;
             padding: 0 15px;
         }
-        /* Icon Grid just like your example */
+        
         .action-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 20px 15px;
             padding: 0 25px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
         }
         .action-btn {
             display: flex;
@@ -102,7 +103,6 @@
             color: #ffffff;
             box-shadow: 0 4px 6px rgba(0,0,0,0.15);
         }
-        /* Colors for different buttons */
         .bg-call { background: #0284c7; }
         .bg-location { background: #ef4444; }
         .bg-whatsapp { background: #22c55e; }
@@ -110,7 +110,7 @@
         .bg-save { background: #8b5cf6; }
         .bg-share { background: #64748b; }
         
-/* Brands section */
+        /* Brands section */
         .brands-section {
             padding: 25px;
             background-color: #f8fafc;
@@ -122,13 +122,12 @@
             font-size: 18px;
             font-weight: 700;
             color: #1e293b;
-            margin-top: 0;
             margin-bottom: 15px;
             text-align: center;
         }
         .brands-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr); /* Shows 3 logos per row */
+            grid-template-columns: repeat(3, 1fr);
             gap: 12px;
             justify-items: center;
             align-items: center;
@@ -136,21 +135,21 @@
         .brand-logo {
             width: 100%;
             max-width: 80px;
-            height: 45px; /* Keeps all logos a uniform height */
-            object-fit: contain; /* Prevents the logos from stretching out of shape */
+            height: 45px;
+            object-fit: contain;
             background: #ffffff;
             padding: 8px;
             border-radius: 6px;
             border: 1px solid #cbd5e1;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
-        
+
         /* Inquiry Form */
         .inquiry-section {
-            padding: 0 25px 40px 25px;
+            padding: 0 25px;
         }
         .form-group {
-            margin-bottom: 15px;
+            margin-bottom: 12px;
         }
         .form-group input, .form-group textarea {
             width: 100%;
@@ -171,16 +170,20 @@
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
+            transition: background 0.3s;
+        }
+        .submit-btn:hover {
+            background-color: #0ea5e9;
         }
     </style>
 </head>
 <body>
     <div class="card-container">
         <div class="header-bg"></div>
-        
         <div class="profile-section">
             <div class="profile-img">
-                <i class="fas fa-snowflake"></i> </div>
+                <i class="fas fa-snowflake"></i>
+            </div>
             <h1 class="business-name">AirTronics</h1>
             <h2 class="person-name">Paresh Patel</h2>
             <div class="services">Sales | Service | Repair</div>
@@ -195,7 +198,7 @@
                 <div class="icon-circle bg-call"><i class="fas fa-phone-alt"></i></div>
                 <span>Call</span>
             </a>
-            <a href="https://maps.app.goo.gl/W37ZxnT6qMFa8JEi8" target="_blank" class="action-btn">
+            <a href="http://maps.google.com/?q=AirTronics+Naranpura" target="_blank" class="action-btn">
                 <div class="icon-circle bg-location"><i class="fas fa-map-marker-alt"></i></div>
                 <span>Location</span>
             </a>
@@ -216,31 +219,34 @@
                 <span>Share</span>
             </a>
         </div>
-        <div class="brands-grid">
+
+        <div class="brands-section">
+            <h3 class="section-title">Our Brands</h3>
+            <div class="brands-grid">
                 <img src="logos/O general.png" alt="O General" class="brand-logo">
                 <a href="Mitsubishi Catalogue.pdf" target="_blank" style="display: contents;">
-                <img src="logos/Mitsubishi.png" alt="Mitsubishi" class="brand-logo">
-		</a>
-                
+                    <img src="logos/Mitsubishi.png" alt="Mitsubishi" class="brand-logo">
+                </a>
                 <a href="RA 2026 DD Catalogue_compressed.pdf" target="_blank" style="display: contents;">                    
-                <img src="logos/Daikin.png" alt="Daikin" class="brand-logo">
+                    <img src="logos/Daikin.png" alt="Daikin" class="brand-logo">
                 </a>
                 <a href="Panasonic Catalogue.pdf" target="_blank" style="display: contents;">
-                <img src="logos/Panasonic.png" alt="Panasonic" class="brand-logo">
-		</a>
+                    <img src="logos/Panasonic.png" alt="Panasonic" class="brand-logo">
+                </a>
                 <img src="logos/Voltas.png" alt="Voltas" class="brand-logo">
                 <img src="logos/Blue Star.png" alt="Blue Star" class="brand-logo">
-		<a href="Hitachi Catalogue.pdf" target="_blank" style="display: contents;">
-                <img src="logos/Hitachi.png" alt="Hitachi" class="brand-logo">
-		</a>
+                <a href="Hitachi Catalogue.pdf" target="_blank" style="display: contents;">
+                    <img src="logos/Hitachi.png" alt="Hitachi" class="brand-logo">
+                </a>
                 <img src="logos/samsung.png" alt="Samsung" class="brand-logo">
                 <img src="logos/Toshiba.png" alt="Toshiba" class="brand-logo">
-		<a href="Haier Catalogue.pdf" target="_blank" style="display: contents;">
-                <img src="logos/Haier.png" alt="Haier" class="brand-logo">
-		</a>
+                <a href="Haier Catalogue.pdf" target="_blank" style="display: contents;">
+                    <img src="logos/Haier.png" alt="Haier" class="brand-logo">
+                </a>
                 <img src="logos/Godrej.png" alt="Godrej" class="brand-logo">
             </div>
         </div>
+
         <div class="inquiry-section">
             <h3 class="section-title">Inquiry</h3>
             <div class="form-group">
@@ -254,29 +260,25 @@
             </div>
             <button class="submit-btn" onclick="sendToWhatsApp()">Submit</button>
         </div>
-    </div> <script>
+    </div>
+
+    <script>
         function sendToWhatsApp() {
-            // Get the text the customer typed in
             var name = document.getElementById('custName').value;
             var number = document.getElementById('custNumber').value;
             var message = document.getElementById('custMessage').value;
 
-            // Check if they left the required fields blank
             if(name === "" || number === "") {
                 alert("Please fill in your Name and Mobile Number.");
                 return;
             }
 
-            // Create the WhatsApp message format
             var whatsappText = "Hello AirTronics! I have a new inquiry from your digital card.%0A%0A" 
-                             + "*Name:* " + name + "%0A" 
-                             + "*Mobile:* " + number + "%0A" 
-                             + "*Message:* " + message;
+                             + "*Name:* " + encodeURIComponent(name) + "%0A" 
+                             + "*Mobile:* " + encodeURIComponent(number) + "%0A" 
+                             + "*Message:* " + encodeURIComponent(message);
 
-            // Create the final link with your specific phone number
             var whatsappURL = "https://wa.me/919824691056?text=" + whatsappText;
-
-            // Open WhatsApp in a new tab/app
             window.open(whatsappURL, '_blank');
         }
     </script>
