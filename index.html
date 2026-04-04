@@ -14,13 +14,15 @@
             display: flex;
             justify-content: center;
         }
+        /* This container forces everything to stay in one column */
         .card-container {
             background-color: #ffffff;
             width: 100%;
-            max-width: 450px;
+            max-width: 450px; 
             min-height: 100vh;
             box-shadow: 0 0 20px rgba(0,0,0,0.1);
-            padding-bottom: 40px;
+            display: flex;
+            flex-direction: column; /* Forces vertical stacking */
         }
         .header-bg {
             background: linear-gradient(135deg, #0284c7, #0ea5e9);
@@ -110,7 +112,6 @@
         .bg-save { background: #8b5cf6; }
         .bg-share { background: #64748b; }
         
-        /* Brands section */
         .brands-section {
             padding: 25px;
             background-color: #f8fafc;
@@ -144,9 +145,8 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
-        /* Inquiry Form */
         .inquiry-section {
-            padding: 0 25px;
+            padding: 0 25px 40px 25px;
         }
         .form-group {
             margin-bottom: 12px;
@@ -170,20 +170,16 @@
             font-size: 16px;
             font-weight: 600;
             cursor: pointer;
-            transition: background 0.3s;
-        }
-        .submit-btn:hover {
-            background-color: #0ea5e9;
         }
     </style>
 </head>
 <body>
     <div class="card-container">
+        
         <div class="header-bg"></div>
+        
         <div class="profile-section">
-            <div class="profile-img">
-                <i class="fas fa-snowflake"></i>
-            </div>
+            <div class="profile-img"><i class="fas fa-snowflake"></i></div>
             <h1 class="business-name">AirTronics</h1>
             <h2 class="person-name">Paresh Patel</h2>
             <div class="services">Sales | Service | Repair</div>
@@ -198,7 +194,7 @@
                 <div class="icon-circle bg-call"><i class="fas fa-phone-alt"></i></div>
                 <span>Call</span>
             </a>
-            <a href="http://maps.google.com/?q=AirTronics+Naranpura" target="_blank" class="action-btn">
+            <a href="https://goo.gl/maps/XYZ" target="_blank" class="action-btn">
                 <div class="icon-circle bg-location"><i class="fas fa-map-marker-alt"></i></div>
                 <span>Location</span>
             </a>
@@ -206,13 +202,13 @@
                 <div class="icon-circle bg-whatsapp"><i class="fab fa-whatsapp"></i></div>
                 <span>WhatsApp</span>
             </a>
-            <a href="mailto:?subject=AirTronics Inquiry" class="action-btn">
+            <a href="mailto:info@airtronics.com" class="action-btn">
                 <div class="icon-circle bg-email"><i class="fas fa-envelope"></i></div>
                 <span>Email</span>
             </a>
             <a href="#" class="action-btn">
                 <div class="icon-circle bg-save"><i class="fas fa-user-plus"></i></div>
-                <span>Save Contact</span>
+                <span>Save</span>
             </a>
             <a href="#" class="action-btn">
                 <div class="icon-circle bg-share"><i class="fas fa-share-alt"></i></div>
@@ -224,25 +220,15 @@
             <h3 class="section-title">Our Brands</h3>
             <div class="brands-grid">
                 <img src="logos/O general.png" alt="O General" class="brand-logo">
-                <a href="Mitsubishi Catalogue.pdf" target="_blank" style="display: contents;">
-                    <img src="logos/Mitsubishi.png" alt="Mitsubishi" class="brand-logo">
-                </a>
-                <a href="RA 2026 DD Catalogue_compressed.pdf" target="_blank" style="display: contents;">                    
-                    <img src="logos/Daikin.png" alt="Daikin" class="brand-logo">
-                </a>
-                <a href="Panasonic Catalogue.pdf" target="_blank" style="display: contents;">
-                    <img src="logos/Panasonic.png" alt="Panasonic" class="brand-logo">
-                </a>
+                <img src="logos/Mitsubishi.png" alt="Mitsubishi" class="brand-logo">
+                <img src="logos/Daikin.png" alt="Daikin" class="brand-logo">
+                <img src="logos/Panasonic.png" alt="Panasonic" class="brand-logo">
                 <img src="logos/Voltas.png" alt="Voltas" class="brand-logo">
                 <img src="logos/Blue Star.png" alt="Blue Star" class="brand-logo">
-                <a href="Hitachi Catalogue.pdf" target="_blank" style="display: contents;">
-                    <img src="logos/Hitachi.png" alt="Hitachi" class="brand-logo">
-                </a>
+                <img src="logos/Hitachi.png" alt="Hitachi" class="brand-logo">
                 <img src="logos/samsung.png" alt="Samsung" class="brand-logo">
                 <img src="logos/Toshiba.png" alt="Toshiba" class="brand-logo">
-                <a href="Haier Catalogue.pdf" target="_blank" style="display: contents;">
-                    <img src="logos/Haier.png" alt="Haier" class="brand-logo">
-                </a>
+                <img src="logos/Haier.png" alt="Haier" class="brand-logo">
                 <img src="logos/Godrej.png" alt="Godrej" class="brand-logo">
             </div>
         </div>
@@ -260,9 +246,8 @@
             </div>
             <button class="submit-btn" onclick="sendToWhatsApp()">Submit</button>
         </div>
-    </div>
 
-    <script>
+    </div> <script>
         function sendToWhatsApp() {
             var name = document.getElementById('custName').value;
             var number = document.getElementById('custNumber').value;
