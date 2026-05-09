@@ -197,9 +197,9 @@
                 <div class="icon-circle bg-call"><i class="fas fa-phone-alt"></i></div>
                 <span>Call</span>
             </a>
-            <a href="https://www.google.com/maps/search/?api=1&query=Swaminarayan+Avenue,+132ft.+Ring+Road,+Naranpura,+Ahmedabad" target="_blank" class="action-btn">
-            <div class="icon-circle bg-location"><i class="fas fa-map-marker-alt"></i></div>
-            <span>Location</span>
+            <a href="https://maps.app.goo.gl/W37ZxnT6qMFa8JEi8" target="_blank" class="action-btn">
+                <div class="icon-circle bg-location"><i class="fas fa-map-marker-alt"></i></div>
+                <span>Location</span>
             </a>
             <a href="https://wa.me/919824691056" target="_blank" class="action-btn">
                 <div class="icon-circle bg-whatsapp"><i class="fab fa-whatsapp"></i></div>
@@ -245,11 +245,9 @@
                 <img src="logos/Haier.png" alt="Haier" class="brand-logo">
 		</a>
                 <a href="Godrej Catalogue.pdf" target="_blank" style="display: contents;">
-                <img src="logos/Godrej.png" alt="Godrej" class="brand-logo">
+                    <img src="logos/Godrej.png" alt="Godrej" class="brand-logo">
                 </a>
-            </div>
-        </div>
-        <div class="inquiry-section">
+            </div> <div class="inquiry-section">
             <h3 class="section-title">Inquiry</h3>
             <div class="form-group">
                 <input type="text" id="custName" placeholder="Name *">
@@ -261,7 +259,8 @@
                 <textarea id="custMessage" rows="4" placeholder="Message"></textarea>
             </div>
             <button class="submit-btn" onclick="sendToWhatsApp()">Submit</button>
-        </div><script>
+        </div>
+    </div> <script>
         function sendToWhatsApp() {
             // Get the text the customer typed in
             var name = document.getElementById('custName').value;
